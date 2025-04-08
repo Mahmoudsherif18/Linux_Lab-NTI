@@ -1,0 +1,119 @@
+
+----------------Lab_1 -----------------------------------------------------------------
+Q1) 
+- Installed 
+
+Q2)
+Cat --> we use to show all the file at the time it suitable for smallfile
+more --> it suitable to large file which it show the file page by page
+
+Q3)
+rm --> to remove files and we can use to remove Dir by using other command with it 
+rmdir -->  to remove empty dir 
+
+Q4)
+- mkdir -p ~/dir1/dir11
+- mkdir -p ~/dir1/dir12
+- mkdir -p ~/docs/mycv
+- touch  ~/dir1/dir12/file 
+rmdir ~/dir1/dir11 --> can not remove becaus it is empty 
+rm -r ~/dir1/dir11 --> it removed 
+rmdir -p ~/dir1/dir12 --> dir not empty 
+- cd docs , cd mycv , pwd 
+
+Q5)
+- cp /etc/passwd  ~/mypasswd  
+
+Q6) 
+- mv ~/mypasswd  ~/oldpasswd
+
+Q7)
+-CD
+-CD ~
+-CD $home
+
+Q8)
+- ls user/bin/w* 
+- sudo ls user/bin/w*
+
+Q9) 
+- head -n 4 /etc/passwd
+
+Q10)
+- tail -7 /etc/passwd
+
+Q11)
+-man passwd && man 5 passwd 
+
+Q12)
+- man 5 passwd
+
+Q13)
+- man -k passwd 
+
+Q14) 
+- vi mycv  -- > i to input , :wq --> to save , q --> to exist 
+
+Q15)
+- vi mycv --> j,k --> up and down ,, h,l --> right and left ,, /age --> to search about age ,, 
+5g --> move to line num 5 ,, :5d --> delete the 5 line ,, dd --> delete the next line 
+
+
+Q16)
+- cat /etc/shells 
+
+
+
+----------------------task 3-------------------------
+Q1 )
+-sudo useradd muhammed -m  -c 'muhammed qadri'
+- sudo passwd muhammed 
+
+Q2)
+-sudo useradd baduser -m -c 'baduser'
+-sudo paswwd baduser
+
+Q3)
+- groupadd -g 30000 pgroup 
+
+Q4)
+- sudo groupadd -g 20000 badgroup
+
+Q5)
+- sudo usermod -g pgroup muhammed 
+- groups muhammed --> to retrive muhammed group
+
+Q6)
+- sudo passwd muhammed 
+
+Q7)
+-sudo chage -m 30 muhammed
+
+Q8)
+- sudo passwd -l baduser --> to lock password or sudo chage E0 baduser --> to expired or usermod -e1 baduser --> to block account
+- sudo passwd -u baduser --> unlock
+
+Q9)
+-sudo passwd -d baduser
+
+Q10)
+- sudo groupdel badgroup 
+
+Q11)
+- chmod myteam r
+
+Q12)
+- sudo su 'muhammed'
+
+Q13)
+- CD myteam 
+
+Q14)
+- sudo chmod u=rw,g=rx,o=x oldpasswd
+- sudo chmod u=rwx,g=rwx,o=rwx oldpasswd
+- sudo setfacl -PRdm u::rwx,g::rwz,o::rwx --> to put default permission to all file
+
+Q15) 
+- find /home/ -mtime -2 -ls
+
+Q16)
